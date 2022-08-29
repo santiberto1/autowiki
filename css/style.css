@@ -1,0 +1,239 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+/*barra de navegacion*/
+.nav{
+    background-color: #2f558e;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    align-items: center;
+    padding: 5px;
+    font-family: 'Kanit', sans-serif;
+}
+.header .logo {
+    width: 60px;
+    height: 60px;
+    grid-column: 1/2;
+    border-radius: 50%;
+}
+.nav .lista{
+    grid-column: 3/6;
+    display: flex;
+    justify-content: space-around;
+}
+.nav .lista li{
+    list-style: none;
+}
+.nav .lista a{
+    text-decoration: none;
+    color: white;
+    transition: all 300ms;
+}
+.nav .lista li a:hover{
+    transform: scale(1.20);
+    color: #0066ff;
+}
+@media screen and (max-width:800px){
+    .nav .lista{
+        grid-column: 3/6;
+        display: flex;
+        justify-content: space-around;
+        font-size: 13px;
+    }
+    .nav .lista li{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    
+}
+/* principal*/
+/*index*/
+.princ{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 80%;
+    background-color: green;
+    background-image: url(../assets/img/fondodepag.jpg);
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+}
+.princ .imagen_1{
+    border-radius: 20px;
+    margin: 40px;
+}
+.princ .textoa{
+    font-family: 'Kanit', sans-serif;
+    text-align: center;
+    font-size: 35px;
+    color: #2aad46;
+}
+/*index mobile*/
+@media screen and (max-width:800px){
+    .princ{
+        display: grid;
+        grid-template-columns: repeat(1, 2fr);
+        width: 100%;
+        height: 40%;
+        background-color: rgb(255, 255, 255);
+        background-image: url(../assets/img/fondodepag.jpg);
+        height: 100vh;
+        background-position: center;
+        background-size: cover;
+
+    }
+    .princ .imagen_1{
+        width: 350px;
+        height: auto;
+    }
+    .princ .textoa{
+        font-family: 'Kanit', sans-serif;
+        font-size: 25px;
+        color: #ec1313;
+    }
+}
+/*categorias de autos*/
+.autos .auto{
+    display: grid;
+    grid-template-columns: repeat(1, 5fr);
+    width: 95%;
+    height: auto;
+    margin: 10px;
+}
+/*categorias de auto mobile*/
+@media screen and (max-width:800px){
+    .autos .auto{
+        display: grid;
+        grid-template-columns: repeat(1, 5fr);
+        width: 400px;
+        height: auto;
+        margin: 10px;
+
+    }
+    .autos .auto{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+/*contacto*/
+.formulario{
+    width: 450px;
+    margin: auto;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    margin-top: 20px;
+    border-radius: 7px;
+}
+input textarea{
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 7px;
+    box-sizing: border-box;
+    font-size: 17px;
+    border: none;
+}
+textarea{
+    min-height: 100px;
+    max-height: 300px;
+    max-width: 100%;
+}
+/*contacto mobile*/
+
+
+/*nosotros*/
+.nosotros{
+    font-family: 'Kanit', sans-serif;
+    font-size: 18px;
+}
+.nosotros .mapa{
+    padding: 20px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+}
+.nosotros .texton{
+    padding: 20px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    width: 300px;
+    height: auto;
+}
+/*nosotros mobile*/
+.nosotros .mapa{
+
+}
+/*footer*/
+.pie-pagina{
+    width: 100%;
+    background-color: #2f558e;
+    font-family: 'Kanit', sans-serif;
+}
+.pie-pagina .grupo-1{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap:50px;
+    padding: 45px 0px;
+}
+.pie-pagina .grupo-1 .box figure{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pie-pagina .grupo-1 .box figure img{
+    width: 250px;
+    border-radius: 50%;
+}
+.pie-pagina .grupo-1 .box h2{
+    color: #fff;
+    margin-bottom: 25px;
+    font-size: 20px;
+}
+.pie-pagina .grupo-1 .box p{
+    color: #efefef;
+    margin-bottom: 10px;
+}
+.pie-pagina .grupo-1 .red-social a{
+    display: inline-block;
+    text-decoration: none;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    color: #fff;
+    margin-right: 10px;
+    background-color: #555555;
+    text-align: center;
+    transition: all 300ms ease;
+    border-radius: 5px;
+}
+.pie-pagina .grupo-1 .red-social a:hover{
+    color: #0066ff;
+}
+.pie-pagina .grupo-2{
+    background-color: #2f558e;
+    padding: 15px 10px;
+    text-align: center;
+    color: #fff;
+}
+.pie-pagina .grupo-2 small{
+    font-size: 15px;
+}
+@media screen and (max-width:800px){
+    .pie-pagina .grupo-1{
+        width: 90%;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap:30px;
+        padding: 35px 0px;
+    }
+}
