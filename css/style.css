@@ -2,10 +2,11 @@
     margin: 0;
     box-sizing: border-box;
     padding: 0;
+    
 }
 /*barra de navegacion*/
 .nav{
-    background-color: #2f558e;
+    background-color:#2f558e;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     align-items: center;
@@ -35,6 +36,7 @@
     transform: scale(1.20);
     color: #0066ff;
 }
+/*barra de navegacion mobile*/
 @media screen and (max-width:800px){
     .nav .lista{
         grid-column: 3/6;
@@ -57,7 +59,6 @@
     align-items: center;
     width: 100%;
     height: 80%;
-    background-color: green;
     background-image: url(../assets/img/fondodepag.jpg);
     height: 100vh;
     background-position: center;
@@ -67,11 +68,23 @@
     border-radius: 20px;
     margin: 40px;
 }
-.princ .textoa{
+.princ .textoaa{
     font-family: 'Kanit', sans-serif;
     text-align: center;
-    font-size: 35px;
-    color: #2aad46;
+    font-size: 50px;
+    color: #7899df;
+    position: relative;
+    top: -180px;
+}
+.princ .textoab{
+    font-family: 'Kanit', sans-serif;
+    text-align: center;
+    font-size: 72px;
+    background: -webkit-linear-gradient(180deg, rgba(63,94,251,1) 0%, rgba(47,85,142,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+    top: -220px;
 }
 /*index mobile*/
 @media screen and (max-width:800px){
@@ -87,16 +100,12 @@
         background-size: cover;
 
     }
-    .princ .imagen_1{
-        width: 350px;
-        height: auto;
     }
     .princ .textoa{
         font-family: 'Kanit', sans-serif;
         font-size: 25px;
         color: #ec1313;
     }
-}
 /*categorias de autos*/
 .autos .auto{
     display: grid;
