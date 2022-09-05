@@ -18,6 +18,7 @@
     height: 60px;
     grid-column: 1/2;
     border-radius: 50%;
+    position: relative;
 }
 .nav .lista{
     grid-column: 3/6;
@@ -34,7 +35,15 @@
 }
 .nav .lista li a:hover{
     transform: scale(1.20);
-    color: #0066ff;
+    color: #000000;
+}
+.logo{
+    animation-name: animacionlogo;
+    animation-duration: 2s;
+}
+@keyframes animacionlogo {
+    0%{left:-100px;top:0px}
+    100%{left:0px;top:0px}
 }
 /*barra de navegacion mobile*/
 @media screen and (max-width:800px){
@@ -72,9 +81,8 @@
     font-family: 'Kanit', sans-serif;
     text-align: center;
     font-size: 50px;
-    color: #8e2aad;
-    position: relative;
-    top: -180px;
+    color: #031daf;
+
 }
 .princ .textoab{
     font-family: 'Kanit', sans-serif;
@@ -83,8 +91,6 @@
     background: -webkit-linear-gradient(180deg, rgba(63,94,251,1) 0%, rgba(47,85,142,1) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    position: relative;
-    top: -220px;
 }
 /*index mobile*/
 @media screen and (max-width:800px){
@@ -107,27 +113,26 @@
         color: #ec1313;
     }
 /*categorias de autos*/
-.autos .auto{
+.autos .autoa{
     display: grid;
     grid-template-columns: repeat(1, 5fr);
-    width: 95%;
+    width: 800px;
     height: auto;
     margin: 10px;
 }
+.autos img{
+    display: flex;
+   text-align: center;
+}
+
 /*categorias de auto mobile*/
 @media screen and (max-width:800px){
     .autos .auto{
         display: grid;
         grid-template-columns: repeat(1, 5fr);
-        width: 400px;
+        width: 200px;
         height: auto;
-        margin: 10px;
-
-    }
-    .autos .auto{
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        margin: 20px;
     }
 }
 /*contacto*/
