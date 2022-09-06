@@ -6,12 +6,13 @@
 }
 /*barra de navegacion*/
 .nav{
-    background-color:#2f558e;
+    background-color: #2f558e;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     align-items: center;
     padding: 5px;
     font-family: 'Kanit', sans-serif;
+    border-bottom: 2px solid black;
 }
 .header .logo {
     width: 60px;
@@ -30,12 +31,12 @@
 }
 .nav .lista a{
     text-decoration: none;
-    color: white;
+    color: black;
     transition: all 300ms;
 }
 .nav .lista li a:hover{
     transform: scale(1.20);
-    color: #000000;
+    color: #ffffff;
 }
 .logo{
     animation-name: animacionlogo;
@@ -62,13 +63,15 @@
 }
 /* principal*/
 /*index*/
+.body{
+    background-image: url(../assets/img/fondodepag.jpg);
+}
 .princ{
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 80%;
-    background-image: url(../assets/img/fondodepag.jpg);
+    height: 80%;;
     height: 100vh;
     background-position: center;
     background-size: cover;
@@ -136,26 +139,85 @@
     }
 }
 /*contacto*/
-.formulario{
-    width: 450px;
-    margin: auto;
-    padding: 10px 20px;
-    box-sizing: border-box;
-    margin-top: 20px;
-    border-radius: 7px;
+.cont{
+    width: 100vw;
+    height: 100vh;
+    background-color: #2f558e;
+    opacity: 0.6;
+    background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #2f558e 12px ), repeating-linear-gradient( #d9dbfd55, #d9dbfd );
 }
-input textarea{
+.form{
+    width: 340px;
+    height: 440px;
+    background: rgb(184, 199, 223);
+    border-radius: 8px;
+    box-shadow: 0 0 40px -10px #000;
+    margin: calc(50vh - 220px) auto;
+    padding: 20px 30px;
+    max-width: calc(100vw -40px);
+    box-sizing: border-box;
+    font-family: 'Kanit', sans-serif;
+    position: relative;
+}
+.contacto{
+    margin: 10px 0;
+    padding-bottom: 10ox;
+    width: 180px;
+    color: rgb(107, 107, 107);
+    border-bottom: 3px solid black;
+}
+.inputa{
     width: 100%;
-    margin-bottom: 20px;
-    padding: 7px;
+    padding: 10px;
     box-sizing: border-box;
-    font-size: 17px;
-    border: none;
+    background: none;
+    outline: none;
+    resize: none;
+    border: 0;
+    font-family: 'Kanit', sans-serif;
+    transition: all .3s;
+    border-bottom: 2px solid rgb(107, 107, 107);
 }
-textarea{
-    min-height: 100px;
-    max-height: 300px;
-    max-width: 100%;
+input:focus{
+   border-bottom: 2px solid lightblue; 
+}
+p:before{
+    content: attr(type);
+    display: block;
+    margin: 28px 0 0;
+    font-size: 15px;
+    color: rgb(107, 107, 107);
+}
+.boton{
+    float: right;
+    padding: 8px 12px;
+    margin: 8px 0 0;
+    font-family: 'Kanit', sans-serif;
+    border: 2px solid rgb(107, 107, 107);
+    background: 0;
+    color: black;
+    cursor: pointer;
+    transition: all .3s;
+    border-radius: 5px;
+}
+button:hover{
+    background: rgb(107, 107, 107);
+    color: white;
+}
+.span{
+    position: absolute;
+    bottom: -15px;
+    right: -20px;
+    background: black;
+    color: white;
+    width: 320px;
+    padding: 16px 4px 16px 0;
+    border-radius: 6px;
+    font-size: 13px;
+    box-shadow: 10px 10px 40px -14px #000;
+}
+span{
+    margin: 0 5px 0 15px;
 }
 /*contacto mobile*/
 
@@ -183,6 +245,18 @@ textarea{
 .nosotros .mapa{
 
 }
+/*noticias*/
+.noticias{
+    display: grid;
+    grid-template-columns: repeat(1, 6fr);
+}
+.noticiaa{
+    width: 800px;
+    height: 600px;
+    margin: 10px;
+    border-radius: 8px;
+}
+/*noticias mobile*/
 /*footer*/
 .pie-pagina{
     width: 100%;
