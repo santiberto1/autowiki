@@ -130,21 +130,19 @@
 
 /*categorias de auto mobile*/
 @media screen and (max-width:800px){
-    .autos .auto{
+    .autos .autoa{
         display: grid;
         grid-template-columns: repeat(1, 5fr);
-        width: 200px;
+        width: 400px;
         height: auto;
         margin: 20px;
     }
 }
 /*contacto*/
-.cont{
+.foto{
+    position: relative;
     width: 100vw;
     height: 100vh;
-    background-color: #2f558e;
-    opacity: 0.6;
-    background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #2f558e 12px ), repeating-linear-gradient( #d9dbfd55, #d9dbfd );
 }
 .form{
     width: 340px;

@@ -1,0 +1,24 @@
+.autos
+    img{
+    display: flex;
+    text-align: center;
+    }
+    .autoa{
+        display: grid;
+        grid-template-columns: repeat(1, 5fr);
+        width: 800px;
+        height: auto;
+        margin: 10px;
+    }
+
+    @media  screen and (max-widht:800px) {
+        .autos
+            .autosa{
+                display: grid;
+                grid-template-columns: repeat(1, 5fr);
+                width: 400px;
+                height: auto;
+                margin: 20px;
+            }
+        
+    }
