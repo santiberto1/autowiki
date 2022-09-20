@@ -1,12 +1,12 @@
 
 /*barra de navegacion*/
 .nav{
-    background-color: #2f558e;
+    background-color: map-get($colores, colorprinc);
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     align-items: center;
     padding: 5px;
-    font-family: 'Kanit', sans-serif;
+    font-family: map-get($tipografia, letraprinc);
     border-bottom: 2px solid black;
     .lista{
         grid-column: 3/6;
@@ -88,8 +88,8 @@
 /*footer*/
 .pie-pagina{
     width: 100%;
-    background-color: #2f558e;
-    font-family: 'Kanit', sans-serif;
+    background-color: map-get($colores, colorprin);
+    font-family: map-get($tipografia, letraprinc);
     .grupo-1{
         width: 100%;
         max-width: 1200px;
@@ -135,12 +135,12 @@
                 border-radius: 5px;
             }
             a:hover{
-                color: #0066ff;  
+                color: map-get($colores, hovera);  
             }
         }
     }
     .grupo-2{
-        background-color: #2f558e;
+        background-color: map-get($colores, colorprin);
         padding: 15px 10px;
         text-align: center;
         color: #fff;
@@ -159,4 +159,31 @@
             padding: 35px 0px;
         }
     }
-    }    
+    }   
+    /*mapeo*/
+    $colores: {
+        colorprin: #2f558e,
+        hovera: #0066ff,
+        hoverb: #ffffff,
+    }; 
+    $tipografia: {
+        letraprinc: font-family: 'Kanit', sans-serif,
+        letrasecu: font-family: sans-serif,
+    }
+
+    /*mixin*/
+    @mixin .cartauto{
+        background-color: #616a6b;
+        color: white;
+        font-family: map-get($tipografia, letrasecu);
+        width: 400px;
+        height: auto;
+        margin: 15px;
+        padding: 15px;
+        border-radius: 9px;
+    }
+
+    .cartauto--suv{
+        @include .cartauto;
+        background-color: #5b9c9e;
+    }
