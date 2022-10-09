@@ -65,6 +65,8 @@
 /*index*/
 .princ{
     background-image: url(../assets/img/fondodepag.jpg);
+}
+.princ{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -90,6 +92,7 @@
     text-align: center;
     font-size: 72px;
     color: #ffffff;
+}
 /*index mobile*/
 @media screen and (max-width:800px){
     .princ{
@@ -104,14 +107,13 @@
         background-size: cover;
 
     }
-    }
     .princ .textoa{
         font-family: 'Kanit', sans-serif;
         font-size: 25px;
         color: #ec1313;
     }
 /*categorias de autos*/
-.contenedor-img{
+.contenedor_img{
     width: 100%;
     max-width: 100%;
     margin: auto;
@@ -122,26 +124,26 @@
     grid-template-rows: 250px;
     grid-gap: 20px;
 }
-.contenedor-img .box-img figure{
+.contenedor_img .box_img figure{
     width: 100%;
     height: 100%;
 }
-.contenedor-img .box-img img{
+.contenedor_img .box_img img{
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
-.contenedor-img .box-img:nth-child(1){
+.contenedor_img .box_img:nth-child(1){
     grid-column-start: span 2;
 }
-.contenedor-img .box-img:nth-child(4){
+.contenedor_img .box_img:nth-child(4){
     grid-row-start: span 2;
 }
-.foto-galeriaa{
+.foto_galeriaa{
     position: relative;
     overflow: hidden;
 }
-.foto-galeriaa::before{
+.foto_galeriaa::before{
     content: "Sedanes";
     position: absolute;
     top: 0;
@@ -159,14 +161,14 @@
     font-size: 1.5rem;
     font-family: 'Kanit', sans-serif;
 }
-.foto-galeriaa:hover::before{
+.foto_galeriaa:hover::before{
     transform: scale(1);
 }
-.foto-galeriab{
+.foto_galeriab{
     position: relative;
     overflow: hidden;
 }
-.foto-galeriab::before{
+.foto_galeriab::before{
     content: "Hatchbacks";
     position: absolute;
     top: 0;
@@ -184,14 +186,14 @@
     font-size: 1.5rem;
     font-family: 'Kanit', sans-serif;
 }
-.foto-galeriab:hover::before{
+.foto_galeriab:hover::before{
     transform: scale(1);
 }
-.foto-galeriac{
+.foto_galeriac{
     position: relative;
     overflow: hidden;
 }
-.foto-galeriac::before{
+.foto_galeriac::before{
     content: "Crossovers";
     position: absolute;
     top: 0;
@@ -209,14 +211,14 @@
     font-size: 1.5rem;
     font-family: 'Kanit', sans-serif;
 }
-.foto-galeriac:hover::before{
+.foto_galeriac:hover::before{
     transform: scale(1);
 }
-.foto-galeriad{
+.foto_galeriad{
     position: relative;
     overflow: hidden;
 }
-.foto-galeriad::before{
+.foto_galeriad::before{
     content: "Hiperdeportivos";
     position: absolute;
     top: 0;
@@ -234,14 +236,14 @@
     font-size: 1.5rem;
     font-family: 'Kanit', sans-serif;
 }
-.foto-galeriad:hover::before{
+.foto_galeriad:hover::before{
     transform: scale(1);
 }
-.foto-galeriae{
+.foto_galeriae{
     position: relative;
     overflow: hidden;
 }
-.foto-galeriae::before{
+.foto_galeriae::before{
     content: "Deportivos";
     position: absolute;
     top: 0;
@@ -259,14 +261,14 @@
     font-size: 1.5rem;
     font-family: 'Kanit', sans-serif;
 }
-.foto-galeriae:hover::before{
+.foto_galeriae:hover::before{
     transform: scale(1);
 }
-.foto-galeriaf{
+.foto_galeriaf{
     position: relative;
     overflow: hidden;
 }
-.foto-galeriaf::before{
+.foto_galeriaf::before{
     content: "SUVS";
     position: absolute;
     top: 0;
@@ -284,14 +286,14 @@
     font-size: 1.5rem;
     font-family: 'Kanit', sans-serif;
 }
-.foto-galeriaf:hover::before{
+.foto_galeriaf:hover::before{
     transform: scale(1);
 }
-.foto-galeriag{
+.foto_galeriag{
     position: relative;
     overflow: hidden;
 }
-.foto-galeriag::before{
+.foto_galeriag::before{
     content: "Descapotables";
     position: absolute;
     top: 0;
@@ -309,16 +311,16 @@
     font-size: 1.5rem;
     font-family: 'Kanit', sans-serif;
 }
-.foto-galeriag:hover::before{
+.foto_galeriag:hover::before{
     transform: scale(1);
 }
 /*categorias de auto mobile*/
 @media screen and (max-width:800px){
-    .contenedor-img{
+    .contenedor_img{
         width: 95%;
         grid-template-columns: repeat(2, 1fr);
     }
-    .contenedor-img .box-img img{
+    .contenedor_img .box_img img{
         height: auto;
     }
 }
@@ -440,12 +442,12 @@ span{
 }
 /*noticias mobile*/
 /*footer*/
-.pie-pagina{
+.pie_pagina{
     width: 100%;
     background-color: #2f558e;
     font-family: 'Kanit', sans-serif;
 }
-.pie-pagina .grupo-1{
+.pie_pagina .grupo_1{
     width: 100%;
     max-width: 1200px;
     margin: auto;
@@ -454,27 +456,27 @@ span{
     grid-gap:50px;
     padding: 45px 0px;
 }
-.pie-pagina .grupo-1 .box figure{
+.pie_pagina .grupo_1 .caja figure{
     width: 100%;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.pie-pagina .grupo-1 .box figure img{
+.pie_pagina .grupo_1 .caja figure img{
     width: 250px;
     border-radius: 50%;
 }
-.pie-pagina .grupo-1 .box h2{
+.pie_pagina .grupo_1 .caja h2{
     color: #fff;
     margin-bottom: 25px;
     font-size: 20px;
 }
-.pie-pagina .grupo-1 .box p{
+.pie_pagina .grupo_1 .caja p{
     color: #efefef;
     margin-bottom: 10px;
 }
-.pie-pagina .grupo-1 .red-social a{
+.pie_pagina .grupo_1 .red_social a{
     display: inline-block;
     text-decoration: none;
     width: 45px;
@@ -487,20 +489,20 @@ span{
     transition: all 300ms ease;
     border-radius: 5px;
 }
-.pie-pagina .grupo-1 .red-social a:hover{
+.pie_pagina .grupo_1 .red_social a:hover{
     color: #0066ff;
 }
-.pie-pagina .grupo-2{
+.pie_pagina .grupo_2{
     background-color: #2f558e;
     padding: 15px 10px;
     text-align: center;
     color: #fff;
 }
-.pie-pagina .grupo-2 small{
+.pie_pagina .grupo_2 small{
     font-size: 15px;
 }
 @media screen and (max-width:800px){
-    .pie-pagina .grupo-1{
+    .pie_pagina .grupo_1{
         width: 90%;
         grid-template-columns: repeat(1, 1fr);
         grid-gap:30px;
