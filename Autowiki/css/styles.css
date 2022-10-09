@@ -1,0 +1,508 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+    
+}
+/*barra de navegacion*/
+.nav{
+    background-color: #2f558e;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    align-items: center;
+    padding: 5px;
+    font-family: 'Kanit', sans-serif;
+    border-bottom: 2px solid black;
+}
+.header .logo {
+    width: 60px;
+    height: 60px;
+    grid-column: 1/2;
+    border-radius: 50%;
+    position: relative;
+}
+.nav .lista{
+    grid-column: 3/6;
+    display: flex;
+    justify-content: space-around;
+}
+.nav .lista li{
+    list-style: none;
+}
+.nav .lista a{
+    text-decoration: none;
+    color: black;
+    transition: all 300ms;
+}
+.nav .lista li a:hover{
+    transform: scale(1.20);
+    color: #ffffff;
+}
+.logo{
+    animation-name: animacionlogo;
+    animation-duration: 2s;
+}
+@keyframes animacionlogo {
+    0%{left:-100px;top:0px}
+    100%{left:0px;top:0px}
+}
+/*barra de navegacion mobile*/
+@media screen and (max-width:800px){
+    .nav .lista{
+        grid-column: 3/6;
+        display: flex;
+        justify-content: space-around;
+        font-size: 13px;
+    }
+    .nav .lista li{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    
+}
+/* principal*/
+/*index*/
+.princ{
+    background-image: url(../Assetes/img/fondodepag.jpg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 80%;;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+}
+.princ .imagen_1{
+    border-radius: 20px;
+    margin: 40px;
+}
+.princ .textoaa{
+    font-family: 'Kanit', sans-serif;
+    text-align: center;
+    font-size: 50px;
+    color: #ffffff;
+
+}
+.princ .textoab{
+    font-family: 'Kanit', sans-serif;
+    text-align: center;
+    font-size: 72px;
+    color: #ffffff;
+}
+/*index mobile*/
+@media screen and (max-width:800px){
+    .princ{
+        display: grid;
+        grid-template-columns: repeat(1, 2fr);
+        width: 100%;
+        height: 40%;
+        background-color: rgb(255, 255, 255);
+        background-image: url(../Assetes/img/fondodepag.jpg);
+        height: 100vh;
+        background-position: center;
+        background-size: cover;
+
+    }
+    }
+    .princ .textoaa{
+        font-family: 'Kanit', sans-serif;
+        font-size: 25px;
+        color: #ffffff;
+    }
+/*categorias de autos*/
+.titulo{
+    font-family: 'Kanit', sans-serif;
+    text-align: center;
+
+}
+.container-img{
+    width: 100%;
+    max-width: 1100px;
+    margin: auto;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 250px;
+    grid-gap: 20px;
+}
+.container-img .box-img figure{
+    width: 100%;
+    height: 100%;
+}
+.container-img .box-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.container-img .box-img:nth-child(1){
+    grid-column-start: span 2;
+}
+.container-img .box-img:nth-child(4){
+    grid-row-start: span 2;
+}
+.box-imga{
+    position: relative;
+    overflow: hidden;
+}
+.box-imga::before{
+    content: "SEDÁN";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #5b40f3a6;
+    transform: scale(0);
+    transition: transform .8s;
+    color:#fff;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-family: 'Kanit', sans-serif;
+}
+.box-imga:hover::before{
+    transform: scale(1) rotate(360deg);
+}
+.box-imgb{
+    position: relative;
+    overflow: hidden;
+}
+.box-imgb::before{
+    content: "HATCHBACK";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #5b40f3a6;
+    transform: scale(0);
+    transition: transform .8s;
+    color:#fff;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-family: 'Kanit', sans-serif;
+}
+.box-imgb:hover::before{
+    transform: scale(1) rotate(360deg);
+}
+.box-imgc{
+    position: relative;
+    overflow: hidden;
+}
+.box-imgc::before{
+    content: "CROSSOVER";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #5b40f3a6;
+    transform: scale(0);
+    transition: transform .8s;
+    color:#fff;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-family: 'Kanit', sans-serif;
+}
+.box-imgc:hover::before{
+    transform: scale(1) rotate(360deg);
+}
+.box-imgd{
+    position: relative;
+    overflow: hidden;
+}
+.box-imgd::before{
+    content: "SUV";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #5b40f3a6;
+    transform: scale(0);
+    transition: transform .8s;
+    color:#fff;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-family: 'Kanit', sans-serif;
+}
+.box-imgd:hover::before{
+    transform: scale(1) rotate(360deg);
+}
+.box-imge{
+    position: relative;
+    overflow: hidden;
+}
+.box-imge::before{
+    content: "CONVERTIBLE";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #5b40f3a6;
+    transform: scale(0);
+    transition: transform .8s;
+    color:#fff;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-family: 'Kanit', sans-serif;
+}
+.box-imge:hover::before{
+    transform: scale(1) rotate(360deg);
+}
+.box-imgf{
+    position: relative;
+    overflow: hidden;
+}
+.box-imgf::before{
+    content: "HIPERDEPORTIVO";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #5b40f3a6;
+    transform: scale(0);
+    transition: transform .8s;
+    color:#fff;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-family: 'Kanit', sans-serif;
+}
+.box-imgf:hover::before{
+    transform: scale(1) rotate(360deg);
+}
+.box-imgg{
+    position: relative;
+    overflow: hidden;
+}
+.box-imgg::before{
+    content: "DEPORTIVO";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #5b40f3a6;
+    transform: scale(0);
+    transition: transform .8s;
+    color:#fff;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-family: 'Kanit', sans-serif;
+}
+.box-imgg:hover::before{
+    transform: scale(1) rotate(360deg);
+}
+/*categorias de auto mobile*/
+@media screen and (max-width:800px){
+.container-img{
+    width: 90%;
+    grid-template-columns: repeat(1, 1fr);
+}
+.container-img .box-img img{
+    height: 200px;
+}
+}
+/*contacto*/
+.foto{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+.form{
+    width: 340px;
+    height: 440px;
+    background: rgb(184, 199, 223);
+    border-radius: 8px;
+    box-shadow: 0 0 40px -10px #000;
+    margin: calc(50vh - 220px) auto;
+    padding: 20px 30px;
+    max-width: calc(100vw -40px);
+    box-sizing: border-box;
+    font-family: 'Kanit', sans-serif;
+    position: relative;
+}
+.contacto{
+    margin: 10px 0;
+    padding-bottom: 10ox;
+    width: 180px;
+    color: rgb(107, 107, 107);
+    border-bottom: 3px solid black;
+}
+.inputa{
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    background: none;
+    outline: none;
+    resize: none;
+    border: 0;
+    font-family: 'Kanit', sans-serif;
+    transition: all .3s;
+    border-bottom: 2px solid rgb(107, 107, 107);
+}
+input:focus{
+   border-bottom: 2px solid lightblue; 
+}
+p:before{
+    content: attr(type);
+    display: block;
+    margin: 28px 0 0;
+    font-size: 15px;
+    color: rgb(107, 107, 107);
+}
+.boton{
+    float: right;
+    padding: 8px 12px;
+    margin: 8px 0 0;
+    font-family: 'Kanit', sans-serif;
+    border: 2px solid rgb(107, 107, 107);
+    background: 0;
+    color: black;
+    cursor: pointer;
+    transition: all .3s;
+    border-radius: 5px;
+}
+button:hover{
+    background: rgb(107, 107, 107);
+    color: white;
+}
+.span{
+    position: absolute;
+    bottom: -15px;
+    right: -20px;
+    background: black;
+    color: white;
+    width: 320px;
+    padding: 16px 4px 16px 0;
+    border-radius: 6px;
+    font-size: 13px;
+    box-shadow: 10px 10px 40px -14px #000;
+}
+span{
+    margin: 0 5px 0 15px;
+}
+/*contacto mobile*/
+
+
+/*nosotros*/
+.nosotros{
+    font-family: 'Kanit', sans-serif;
+    font-size: 18px;
+}
+.nosotros .mapa{
+    padding: 20px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+}
+.nosotros .texton{
+    padding: 20px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    width: 300px;
+    height: auto;
+}
+/*nosotros mobile*/
+.nosotros .mapa{
+
+}
+/*noticias*/
+.noticias{
+    display: grid;
+    grid-template-columns: repeat(1, 6fr);
+}
+.noticiaa{
+    width: 800px;
+    height: 600px;
+    margin: 10px;
+    border-radius: 8px;
+}
+/*noticias mobile*/
+/*footer*/
+.pie-pagina{
+    width: 100%;
+    background-color: #2f558e;
+    font-family: 'Kanit', sans-serif;
+}
+.pie-pagina .grupo-1{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap:50px;
+    padding: 45px 0px;
+}
+.pie-pagina .grupo-1 .box figure{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pie-pagina .grupo-1 .box figure img{
+    width: 250px;
+    border-radius: 50%;
+}
+.pie-pagina .grupo-1 .box h2{
+    color: #fff;
+    margin-bottom: 25px;
+    font-size: 20px;
+}
+.pie-pagina .grupo-1 .box p{
+    color: #efefef;
+    margin-bottom: 10px;
+}
+.pie-pagina .grupo-1 .red-social a{
+    display: inline-block;
+    text-decoration: none;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    color: #fff;
+    margin-right: 10px;
+    background-color: #555555;
+    text-align: center;
+    transition: all 300ms ease;
+    border-radius: 5px;
+}
+.pie-pagina .grupo-1 .red-social a:hover{
+    color: #0066ff;
+}
+.pie-pagina .grupo-2{
+    background-color: #2f558e;
+    padding: 15px 10px;
+    text-align: center;
+    color: #fff;
+}
+.pie-pagina .grupo-2 small{
+    font-size: 15px;
+}
+@media screen and (max-width:800px){
+    .pie-pagina .grupo-1{
+        width: 90%;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap:30px;
+        padding: 35px 0px;
+    }
+}
