@@ -2,9 +2,14 @@
     margin: 0;
     box-sizing: border-box;
     padding: 0;
-    
+    font-family: 'Poppins', sans-serif;
 }
 /*barra de navegacion*/
+.header{
+    box-shadow: -1px 15px 18px -2px rgba(54,54,54,0.94);
+    -webkit-box-shadow: -1px 15px 18px -2px rgba(54,54,54,0.94);
+    -moz-box-shadow: -1px 15px 18px -2px rgba(54,54,54,0.94);
+}
 .nav{
     background-color: #2f558e;
     display: grid;
@@ -12,7 +17,6 @@
     align-items: center;
     padding: 5px;
     font-family: 'Kanit', sans-serif;
-    border-bottom: 2px solid black;
 }
 .header .logo {
     width: 60px;
@@ -33,6 +37,22 @@
     text-decoration: none;
     color: black;
     transition: all 300ms;
+}
+.nav .lista li a{
+    overflow: hidden;
+    position: relative;
+}
+.nav .lista li a::before{
+    transform: scale(o);
+    width: 150px;
+    height: auto;
+    background-image: url(../Assetes/imghovernav/Capturaa.PNG);
+    position: absolute;
+    transition: .4s;
+    display: flex;
+}
+.nav .lista li a:hover::before{
+    transform: scale(1);
 }
 .nav .lista li a:hover{
     transform: scale(1.20);
@@ -63,59 +83,70 @@
 }
 /* principal*/
 /*index*/
-.princ{
-    background-image: url(../Assetes/img/fondodepag.jpg);
+.inicioi{
     display: flex;
-    justify-content: center;
     align-items: center;
-    width: 100%;
-    height: 80%;;
-    height: 100vh;
-    background-position: center;
+    justify-content: center;
+    background: url(../Assetes/img/fondodepag.jpg) no-repeat;
     background-size: cover;
+    background-position:center;
+    min-height: 100vh;
+    padding: 0 9%;
+    padding-top: 7.5 rem;
+    padding-bottom: 2rem;
 }
-.princ .imagen_1{
-    border-radius: 20px;
-    margin: 40px;
+.inicioi .imagenin img{
+    width: 20vw;
+    animation: float 3s linear infinite;
 }
-.princ .textoaa{
-    font-family: 'Kanit', sans-serif;
-    text-align: center;
-    font-size: 50px;
+@keyframes float{
+    0%, 100%{
+        transform: translateY(0rem);       
+    }
+    50%{
+        transform: translateY(-2.5rem);
+    }
+}
+.inicioi .contenido h1{
+    font-size: 5.5rem;
+    color: #383838;
+    text-transform: uppercase;
+    font-family:'Kanit', sans-serif;
+}
+.inicioi .contenido h1 span{
+    color:#2f558e;
+    text-transform: uppercase;
+}
+.inicioi .contenido p{
+    font-size: 1.7rem;
     color: #ffffff;
-
-}
-.princ .textoab{
-    font-family: 'Kanit', sans-serif;
-    text-align: center;
-    font-size: 72px;
-    color: #ffffff;
+    padding: 1rem 0;
+    font-family:'Kanit', sans-serif;
 }
 /*index mobile*/
 @media screen and (max-width:800px){
-    .princ{
-        display: grid;
-        grid-template-columns: repeat(1, 2fr);
-        width: 100%;
-        height: 40%;
-        background-color: rgb(255, 255, 255);
-        background-image: url(../Assetes/img/fondodepag.jpg);
-        height: 100vh;
-        background-position: center;
-        background-size: cover;
-
-    }
-    }
-    .princ .textoaa{
-        font-family: 'Kanit', sans-serif;
-        font-size: 25px;
-        color: #ffffff;
-    }
+.inico{
+    flex-flow: column-reverse;
+}
+.inicioi .imagenin img{
+    display: none;
+}
+.inicioi .contenido h1{
+    font-size: 3.6rem;
+}
+.inicioi .contenido p{
+    font-size: 1.5rem;
+}
+}
 /*categorias de autos*/
+.bodycat{
+    background: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+}
 .titulo{
     font-family: 'Kanit', sans-serif;
     text-align: center;
-
+    padding: 20px;
 }
 .container-img{
     width: 100%;
@@ -136,6 +167,12 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+.container-img .box-img a figure img{
+    -webkit-box-shadow: 0px 0px 47px 31px rgba(0,0,0,0.54);
+    -moz-box-shadow: 0px 0px 47px 31px rgba(0,0,0,0.54);
+    box-shadow: 0px 0px 47px 31px rgba(0,0,0,0.54);
+    border-radius: 10px;
 }
 .container-img .box-img:nth-child(1){
     grid-column-start: span 2;
@@ -337,7 +374,6 @@
     padding: 20px 30px;
     max-width: calc(100vw -40px);
     box-sizing: border-box;
-    font-family: 'Kanit', sans-serif;
     position: relative;
 }
 .contacto{
@@ -355,7 +391,6 @@
     outline: none;
     resize: none;
     border: 0;
-    font-family: 'Kanit', sans-serif;
     transition: all .3s;
     border-bottom: 2px solid rgb(107, 107, 107);
 }
@@ -373,7 +408,6 @@ p:before{
     float: right;
     padding: 8px 12px;
     margin: 8px 0 0;
-    font-family: 'Kanit', sans-serif;
     border: 2px solid rgb(107, 107, 107);
     background: 0;
     color: black;
@@ -405,37 +439,44 @@ span{
 
 /*nosotros*/
 .nosotros{
-    font-family: 'Kanit', sans-serif;
     font-size: 18px;
+    background: url(../Assetes/img/fondodepag.jpg) no-repeat;
+    background-size: cover;
+    background-position:center;
 }
 .nosotros .mapa{
     padding: 20px;
-    border-radius: 20px;
     display: flex;
     justify-content: center;
 }
-.nosotros .texton{
-    padding: 20px;
-    border-radius: 20px;
+.nosotros .tituloa{
+    padding: 10px;
+    font-size: 2.5rem;
     display: flex;
     justify-content: center;
-    width: 300px;
-    height: auto;
+    color: #d3d3d3;
 }
-/*nosotros mobile*/
-.nosotros .mapa{
+.nosotros .mail{
+    padding: 10px;
+    color: #ffffff;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+}
+.nosotros .celu{
+    padding: 10px;
+    color: #ffffff;
+    font-size: 1.5rem;
+    padding-bottom: 15px;
+    display: flex;
+    justify-content: center;
+}
 
-}
+/*nosotros mobile*/
 /*noticias*/
-.noticias{
-    display: grid;
-    grid-template-columns: repeat(1, 6fr);
-}
-.noticiaa{
-    width: 800px;
-    height: 600px;
-    margin: 10px;
-    border-radius: 8px;
+.notciaa{
+    display: flex;
+    text-align: center;
 }
 /*noticias mobile*/
 /*footer*/
@@ -443,6 +484,9 @@ span{
     width: 100%;
     background-color: #2f558e;
     font-family: 'Kanit', sans-serif;
+    box-shadow: 1px -15px 18px -2px rgba(54,54,54,0.94);
+    -webkit-box-shadow: 1px -15px 18px -2px rgba(54,54,54,0.94);
+    -moz-box-shadow: 1px -15px 18px -2px rgba(54,54,54,0.94);
 }
 .pie-pagina .grupo-1{
     width: 100%;
